@@ -16,18 +16,18 @@
     <view class="select-top">
       <view class="select-top-small">
         <navigator url="list/list?type_male='male'">
-          <image src="http://123.57.80.168:8085/shopping_image/image/images/分类/man.jpg"></image>
+          <image src="http://123.57.80.168:8085/shopping_image/image/images/2type/man.jpg"></image>
         </navigator>
       </view>
       <view class="select-top-small">
         <navigator url="list/list?type_female='female'">
-          <image src="http://123.57.80.168:8085/shopping_image/image/images/分类/woman.jpg"></image>
+          <image src="http://123.57.80.168:8085/shopping_image/image/images/2type/woman.jpg"></image>
         </navigator>
       </view>
     </view>
     <view class="select-bottom">
       <navigator url="list/list?type_children='children'">
-        <image src="http://123.57.80.168:8085/shopping_image/image/images/分类/down.jpg"></image>
+        <image src="http://123.57.80.168:8085/shopping_image/image/images/2type/down.jpg"></image>
       </navigator>
     </view>
   </view>

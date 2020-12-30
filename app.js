@@ -9,6 +9,8 @@ App({
     console.log('App Hide')
   },
   globalData: {
-    hasLogin: false
+    hasLogin: false,
+    baseUrl: 'http://localhost:8099/shopping-b'
+    // baseUrl: 'http://123.57.80.168:8099/shopping-b'
   }
 })

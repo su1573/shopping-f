@@ -1,4 +1,5 @@
 // page/component/new-pages/user/user.js
+var app = getApp();
 Page({
   data: {
     thumb: '',
@@ -28,7 +29,7 @@ Page({
        */
       setTimeout(function () {//用延迟执行的方式避免因为事务冲突得到刚刚删除空的数据库而得不到数据
         wx.request({
-          url: 'http://localhost:8080/shopping-b/order/get_all',
+          url: app.globalData.baseUrl+'/order/get_all',
           success(res) {
             console.log(res.data)
             self.setData({

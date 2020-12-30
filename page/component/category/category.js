@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   data: {
     category: [
@@ -18,7 +19,7 @@ Page({
   onReady() {
     var self = this;
     wx.request({
-      url: 'http://localhost:8080/shopping-b/category/get_all', success(res) {
+      url: app.globalData.baseUrl+'/category/get_all', success(res) {
         console.log(res.data)
         self.setData({
           detail: res.data

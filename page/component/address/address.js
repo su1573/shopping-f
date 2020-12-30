@@ -1,4 +1,5 @@
 // page/component/new-pages/user/address/address.js
+var app = getApp();
 Page({
   data:{
     address:{

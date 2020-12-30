@@ -1,4 +1,5 @@
 // page/component/list/list.js
+var app = getApp();
 Page({
   data: {
     all_goods: [],
@@ -18,7 +19,7 @@ Page({
     // 页面渲染完成
     var self = this;
     wx.request({
-      url: 'http://localhost:8080/shopping-b/good/get_all',
+      url: app.globalData.baseUrl+'/good/get_all',
       success(res) {
         self.setData({
           all_goods: res.data,

@@ -1,4 +1,5 @@
-// page/component/new-pages/cart/cart.js
+// @page/component/app.js
+var app = getApp();
 Page({
   data: {
     carts: [],               // 购物车列表
@@ -13,9 +14,10 @@ Page({
   },
 
   onShow() {//网络请求从数据库中获取购物车信息,比onReady先执行，实时显示购物车状态   
+    console.log("app:"+app)
     var self = this;
     wx.request({
-      url: 'http://localhost:8080/shopping-b/cart/get_all',
+      url: app.globalData.baseUrl+'/cart/get_all',
       success(res) {
         console.log(res.data);
         self.setData({
@@ -47,7 +49,7 @@ Page({
     //将选中的数据发往后台数据库，数据量大，用POST，迟早要做，目前不会
     var self = this;
     wx.request({
-      url: 'http://localhost:8080/shopping-b/good/order',
+      url: app.globalData.baseUrl+'/good/order',
       header: {
         "Content-Type": "application/json;charset=utf-8",       
       },  

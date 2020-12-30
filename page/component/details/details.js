@@ -1,4 +1,5 @@
 // page/component/details/details.js
+var app = getApp();
 Page({
   data: {
     goods: {//前端调用貌似不需要加，但网络请求调用的时候要加
@@ -33,7 +34,7 @@ Page({
   click: function (e) {//点击‘添加到购物车按钮’：网络请求向数据库中存入购物车信息  
     var model = this.data.goodName;
     wx.request({
-      url: "http://localhost:8080/shopping-b/cart/add?goodId="+this.data.goodId+"&goodName="+this.data.goodName+"&goodPrice="+this.data.goodPrice+"&goodMainUrl="+this.data.goodMainUrl+"&goodDetailUrls="+this.data.goodDetailUrls,
+      url: app.globalData.baseUrl+"/cart/add?goodId="+this.data.goodId+"&goodName="+this.data.goodName+"&goodPrice="+this.data.goodPrice+"&goodMainUrl="+this.data.goodMainUrl+"&goodDetailUrls="+this.data.goodDetailUrls,
     });   
 
     wx.showToast({

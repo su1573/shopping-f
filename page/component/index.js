@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   data: {
     imgUrls: [
@@ -22,7 +23,7 @@ Page({
     })
     var self = this;
     wx.request({
-      url: 'http://localhost:8080/shopping-b/good/get_all_odd',
+      url: app.globalData.baseUrl+'/good/get_all_odd',
       success(res) {
         self.setData({
           odd_goods: res.data,
@@ -31,7 +32,7 @@ Page({
       }
     });
     wx.request({
-      url: 'http://localhost:8080/shopping-b/good/get_all_even',
+      url: app.globalData.baseUrl+'/good/get_all_even',
       success(res) {
         self.setData({
           even_goods: res.data,
@@ -39,7 +40,7 @@ Page({
       },
     });
     wx.request({
-      url: 'http://localhost:8080/shopping-b/good/get_title',
+      url: app.globalData.baseUrl+'/good/get_title',
       success(res) {
         self.setData({
           title_goods: res.data,
